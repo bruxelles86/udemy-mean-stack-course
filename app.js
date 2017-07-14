@@ -1,2 +1,1 @@
-var name = 'Everyone!';
-console.log("Hello " + name)
+require('./instantHello');
