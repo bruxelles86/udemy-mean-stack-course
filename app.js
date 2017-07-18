@@ -5,7 +5,16 @@ app.set('port', 8080);
 
 app.get('/', function(req, res) {
    console.log("GET the homepage");
-   res.send("Hello");
+   res  
+        .status(404)
+        .send("Hello");
+});
+
+app.get('/json', function(req, res) {
+   console.log("GET the json");
+   res  
+        .status(200)
+        .json( {"jsondata" : true} );
 });
 
 var server = app.listen(app.get('port'), function() {
