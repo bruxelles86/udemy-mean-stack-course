@@ -6,12 +6,6 @@ app.set('port', 8080);
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-// app.get('/', function(req, res) {
-//   console.log("GET the homepage");
-//   res  
-//         .status(200)
-//         .sendFile(path.join(__dirname, 'public', 'index.html'));
-// });
 
 app.get('/json', function(req, res) {
    console.log("GET the json");
