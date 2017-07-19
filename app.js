@@ -4,7 +4,7 @@ var path = require('path');
 
 app.set('port', 8080);
 
-app.use(function(req, res, next) {
+app.use('/css', function(req, res, next) {
     console.log(req.method, req.url);
     next();
 });
