@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var routes = require('./routes');
 
 app.set('port', 8080);
 
@@ -10,6 +11,8 @@ app.use('/css', function(req, res, next) {
 });
 
 app.use(express.static(path.join(__dirname, 'public')))
+
+app.use('/api', routes);
 
 app.get('/json', function(req, res) {
    console.log("GET the json");
